@@ -6,11 +6,13 @@ import Contact from "./components/Contact";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <h1>App component</h1>
-      <b>fdkj</b>
-      <Contact />
-      <Header />
+      <Header branding="Contacts Manager" />
+      <Contact
+        name="Johnny Delta"
+        email="jdelta@gmail.com"
+        phone="123-123-123"
+      />
+      <Contact name="Jane Echo" email="jecho@gmail.com" phone="123-456-789" />
     </div>
   );
 }
