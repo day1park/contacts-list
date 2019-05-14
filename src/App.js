@@ -9,12 +9,14 @@ function App() {
   return (
     <div className="App">
       <Header branding="Contacts Manager" />
-      <Contact
-        name="Johnny Delta"
-        email="jdelta@gmail.com"
-        phone="123-123-123"
-      />
-      <Contact name="Jane Echo" email="jecho@gmail.com" phone="123-456-789" />
+      <div className="container">
+        <Contact
+          name="Johnny Delta"
+          email="jdelta@gmail.com"
+          phone="123-123-123"
+        />
+        <Contact name="Jane Echo" email="jecho@gmail.com" phone="123-456-789" />
+      </div>
     </div>
   );
 }
