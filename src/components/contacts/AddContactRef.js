@@ -1,3 +1,5 @@
+// this file is not used in the app but here as an example of using refs in place of state,
+
 import React, { Component } from "react";
 
 class AddContact extends Component {
