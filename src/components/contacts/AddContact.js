@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Consumer } from "../../context";
-import uuid from 'uuid'
+import uuid from "uuid";
 
 class AddContact extends Component {
   state = {
@@ -12,16 +12,17 @@ class AddContact extends Component {
   onSubmit = (dispatch, e) => {
     e.preventDefault();
     // console.log(this.state);
-    const { name, email, phone} = this.state;
+    const { name, email, phone } = this.state;
     const newContact = {
-      id: uuid()
+      id: uuid(),
       name,
       email,
       phone
-    }
+    };
     dispatch({
-      type: 'ADD_CONTACT', payload: newContact
-    })
+      type: "ADD_CONTACT",
+      payload: newContact
+    });
   };
 
   onChange = e => {
