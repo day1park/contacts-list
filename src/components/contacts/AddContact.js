@@ -23,6 +23,13 @@ class AddContact extends Component {
       type: "ADD_CONTACT",
       payload: newContact
     });
+
+    // Clears state
+    this.setState({
+      name: "",
+      email: "",
+      phone: ""
+    });
   };
 
   onChange = e => {
