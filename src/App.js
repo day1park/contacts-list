@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Header from "./components/layout/Header";
 import Contacts from "./components/contacts/Contacts";
@@ -10,13 +11,15 @@ function App() {
   return (
     // wrap the entire app inside the provider
     <Provider>
-      <div className="App">
-        <Header branding="Contacts Manager" />
-        <div className="container">
-          <AddContact />
-          <Contacts />
+      <Router>
+        <div className="App">
+          <Header branding="Contacts Manager" />
+          <div className="container">
+            <AddContact />
+            <Contacts />
+          </div>
         </div>
-      </div>
+      </Router>
     </Provider>
   );
 }
