@@ -1,7 +1,19 @@
 import React, { Component } from "react";
 
 class Test extends Component {
+  state = {
+    title: "",
+    body: ""
+  };
   componentDidMount() {
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+      .then(response => response.json())
+      .then(json =>
+        this.setState({
+          title: json.title,
+          body: json.body
+        })
+      );
     console.log("component DID mount...");
   }
 
@@ -10,7 +22,7 @@ class Test extends Component {
   }
 
   componentDidUpdate() {
-    console.log("component DID update");
+    console.log("component DID UPDATE");
   }
 
   render() {
