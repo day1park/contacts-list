@@ -26,9 +26,12 @@ class Test extends Component {
   }
 
   render() {
+    const { title, body } = this.state;
     return (
       <div>
         <h1>TESTING</h1>
+        <h2>{title}</h2>
+        <p>{body}</p>
       </div>
     );
   }
