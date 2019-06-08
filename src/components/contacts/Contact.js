@@ -16,13 +16,20 @@ class Contact extends Component {
   };
 
   // deletes contact on click
-  onDeleteClick = (id, dispatch) => {
-    axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`).then(res =>
-      dispatch({
-        type: "DELETE_CONTACT",
-        payload: id
-      })
-    );
+  // when arrow function put async before parameters
+  onDeleteClick = async (id, dispatch) => {
+    await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+    // then call dispatch to delete
+    dispatch({
+      type: "DELETE_CONTACT",
+      payload: id
+    });
+    // .then(res =>
+    //   dispatch({
+    //     type: "DELETE_CONTACT",
+    //     payload: id
+    //   })
+    // );
 
     dispatch({
       type: "DELETE_CONTACT",
