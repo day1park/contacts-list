@@ -90,7 +90,7 @@ class EditContact extends Component {
                   <input
                     type="submit"
                     value="Update Contact"
-                    className="btn btn-dark btn-block"
+                    className="btn btn-info btn-block"
                   />
                 </form>
               </div>
